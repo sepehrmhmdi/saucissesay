@@ -8,6 +8,9 @@ Ce programme C affiche une “saucisse” en ASCII-art, avec :
 - une option **message fixe** (`-r "texte"`) façon cowsay.
 - une option **reading cow** (`-read <fichier>`) qui fait lire un texte caractère par caractère.
 
+## Demo
+
+![SaucisseSay demo](assets/demo.gif)
 ---
 
 # 1) Compilation et exécution
