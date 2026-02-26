@@ -9,7 +9,6 @@ Ce programme C affiche une “saucisse” en ASCII-art, avec :
 - une option **reading cow** (`-read <fichier>`) qui fait lire un texte caractère par caractère.
 
 ## Demo
-
 ![SaucisseSay demo](assets/demo.gif)
 ---
 
