@@ -477,7 +477,7 @@ Vérifications :
 | `-e`     | string       | Yeux         |
 | `-r`     | texte        | Bulle fixe   |
 | `-read`  | fichier      | Reading Cow  |
-| `-game`  | Nom          | Tamagoshi    |
+| `-game`  | nom          | Tamagoshi    |
 | `-bouge` | distance     | Animation    |
 | `-b`     | —            | Borg         |
 | `-d`     | —            | Dead         |

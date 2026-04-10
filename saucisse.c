@@ -219,12 +219,23 @@ int fitness_update(int fitness, int lunchfood) {
 }
 
 void affiche_tamagoshi(int etat) {
+    
+    // Etat 0 : tout va bien
+    const char* yeux_bien[] = {"^^", "oo", "OO", "°°"};
+    const char* poignet_bien[] = {" π ", " ω ", " U ", " ∩ "};
+    const char* phrase_bien[] = {"Tout va bien !", "Quelle belle journée !", "Il fait beau aujourd'hui !", "Aucun problème dans ma vie !"};
+
+    // Etat 1 : pas bien
+    const char* yeux_malade[] = {"~~", "--", "TT", "QQ"};
+    const char* poignet_malade[] = {"#*#", "...", "___", "≈ ≈"};
+    const char* phrase_malade[] = {"Je ne me sens pas très bien...", "J'ai un peu mal au ventre...", "Je crois que je vais tomber malade...", "Quelque chose ne va pas..."};
+
     if (etat == 0) {
-        affiche_bulle(0, "Tout va bien !");
-        affiche_saucisse(0, "^^", " π ", " ");
+        affiche_bulle(0, phrase_bien[generer_entier(4)]);
+        affiche_saucisse(0, yeux_bien[generer_entier(4)], poignet_bien[generer_entier(4)], " ");
     } else if (etat == 1) {
-        affiche_bulle(0, "Je ne me sens pas bien...");
-        affiche_saucisse(0, "~~", "#*#", " ");
+        affiche_bulle(0, phrase_malade[generer_entier(4)]);
+        affiche_saucisse(0, yeux_malade[generer_entier(4)], poignet_malade[generer_entier(4)], " ");
     } else {
         affiche_bulle(0, "...");
         affiche_saucisse(0, "XX", "¿¿", "U");
