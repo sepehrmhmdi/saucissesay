@@ -12,13 +12,6 @@ Ce programme C affiche une “saucisse” en ASCII-art, avec :
 ![SaucisseSay demo](assets/demo.gif)
 ---
 
-# 1) Compilation et exécution
-
-## Compiler
-## Compilation rapide avec `make` (recommandé)
-
-Le projet inclut un **Makefile** permettant de compiler automatiquement le programme.
-
 ### Compiler
 
 ```bash
@@ -57,6 +50,34 @@ gcc -Wall -Wextra -O2 -o saucisse saucisse.c
 | `-Wextra`     | Active des warnings supplémentaires |
 | `-O2`         | Optimisation niveau 2               |
 | `-o saucisse` | Nom du binaire généré               |
+
+---
+## Test rapide
+
+Essayez ces commandes pour voir immédiatement les fonctionnalités principales :
+
+```bash
+# 1. Bulle simple (type cowsay)
+./saucisse -r "Salut !"
+
+# 2. Animation + couleur
+./saucisse -bouge 30 -c cyan
+
+# 3. Mode + animation
+./saucisse -bouge 25 -g -c jaune
+
+# 4. Reading cow (lecture fichier)
+./saucisse -read demo.txt
+
+# 5. Reading cow + animation (le plus intéressant)
+./saucisse -bouge 20 -read demo.txt -c violet
+
+# 1) Compilation et exécution
+
+## Compiler
+## Compilation rapide avec `make` (recommandé)
+```
+Le projet inclut un **Makefile** permettant de compiler automatiquement le programme.
 
 ---
 
