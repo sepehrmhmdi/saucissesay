@@ -104,11 +104,27 @@ int main(int argc, char *argv[]) {
 
     // Mode simple 
     if (mode == 0) {
-        if (color) printf("%s", color);
-        affiche_bulle(0, message);
-        affiche_saucisse(0, eyes, poignet, "  ");
-        if (color) printf("%s", RESET);
-    } 
+        if (!bouge) {
+            if (color) printf("%s", color);
+            affiche_bulle(0, message);
+            affiche_saucisse(0, eyes, poignet, " ");
+            if (color) printf("%s", RESET);
+        } else {
+            for (int x = 0; x <= distance; x++) {
+                update();
+
+                if (color) printf("%s", color);
+
+                affiche_bulle(x, message);
+                affiche_saucisse(x, eyes, poignet, " ");
+
+                if (color) printf("%s", RESET);
+
+                fflush(stdout);
+                usleep(70000);
+            }
+        }
+    }
 
     // Mode reading
     else if (mode == 1) {
